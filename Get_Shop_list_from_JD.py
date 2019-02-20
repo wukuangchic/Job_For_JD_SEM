@@ -1,3 +1,5 @@
+###抓取品牌对应的京东店铺界面
+print('本程序依赖于BeauifulSoup4库\n在本程序相同目录下\n命名“temp_brand_prlist.csv”文件\n表格第一列为所需抓取旗舰店地址的品牌\n按回车键继续')
 def get_brand_searchurl(i):##品牌名转换为京东搜索结果页
     try:
         import sys
@@ -34,9 +36,6 @@ def get_url_name(i):##获取店铺名称及链接
                 break                
     except:
         print("获取链接错误")
-
-
-print('本程序依赖于BeauifulSoup4库\n在本程序相同目录下\n命名“temp_brand_prlist.csv”文件\n表格第一列为所需抓取旗舰店地址的品牌\n按回车键继续')
 temp = input('')
 list2 = []
 file = open("temp_brand_prlist.csv",)
@@ -54,7 +53,4 @@ for each in file.readlines():
         file_out.write(each)
         file_out.write(",")
     file_out.write('\n')
-print("程序结束\n已命名文件“print_brand_list.csv”")
-    
-    
-
+print("程序结束\n已命名文件“print_brand_list.csv”")  
